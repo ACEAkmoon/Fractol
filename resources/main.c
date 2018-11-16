@@ -12,9 +12,9 @@
 
 #include "fractol.h"
 
-int			exit_x(void)
+static int	exit_x(void)
 {
-	exit(1);
+	exit(EXIT_SUCCESS);
 }
 
 int			main(int ac, char **av)
