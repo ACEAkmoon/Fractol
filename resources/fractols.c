@@ -47,11 +47,6 @@ t_pixel		ft_burningship(int x, int y, t_view *v)
 		p.y = fabs(p.y);
 		tmp.x = p.x * p.x - p.y * p.y + c.x;
 		tmp.y = p.x * p.y * 2 + c.y;
-		/*if (p.x == tmp.x && p.y == tmp.y)
-		{
-			p.i = v->max;
-			break ;
-		}*/
 		p.x = tmp.x;
 		p.y = tmp.y;
 		p.i++;
@@ -72,11 +67,6 @@ t_pixel		ft_julia(int x, int y, t_view *v)
 	{
 		tmp.x = p.x * p.x - p.y * p.y + c.x;
 		tmp.y = p.x * p.y * 2 + c.y;
-		/*if (p.x == tmp.x && p.y == tmp.y)
-		{
-			p.i = v->max;
-			break ;
-		}*/
 		p.x = tmp.x;
 		p.y = tmp.y;
 		p.i++;
@@ -97,11 +87,6 @@ t_pixel		ft_mandelbrot(int x, int y, t_view *v)
 	{
 		tmp.x = p.x * p.x - p.y * p.y + c.x;
 		tmp.y = p.x * p.y * 2 + c.y;
-		/*if (p.x == tmp.x && p.y == tmp.y)
-		{
-			p.i = v->max;
-			break ;
-		}*/
 		p.x = tmp.x;
 		p.y = tmp.y;
 		p.i++;

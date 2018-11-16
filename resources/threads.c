@@ -19,7 +19,7 @@ static void		*ft_thread(void *in)
 	int			y;
 
 	t = (t_thread *)in;
-	y = WIN_H / THREADS * t->id;
+	y = (WIN_H / THREADS) * t->id;
 	while (y < WIN_H / THREADS * (t->id + 1))
 	{
 		x = 0;

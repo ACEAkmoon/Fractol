@@ -47,7 +47,7 @@ _______________________________\n\
 ");
 }
 
-void		ft_zooming(int x, int y, t_view *v, double z, t_map *map)
+void			ft_zooming(int x, int y, t_view *v, double z)
 {
 	double		w;
 	double		h;
@@ -61,7 +61,6 @@ void		ft_zooming(int x, int y, t_view *v, double z, t_map *map)
 	nh = (v->ymax - v->ymin) * (v->zoom * z);
 	v->offx -= ((double)x / WIN_W) * (nw - w);
 	v->offy -= ((double)y / WIN_H) * (nh - h);
-	ft_solver(map);
 }
 
 void			ft_draw(t_map *map)

@@ -34,7 +34,7 @@ static void		ft_set(int key, t_map *map)
 			map->view.xmin = -(h * WIN_W / WIN_H / 2);
 			map->view.xmax = (h * WIN_W / WIN_H / 2);
 		}
-		map->view.max = 32;
+		map->view.max = 40;
 		map->view.zoom = 1.0f;
 	}
 }
@@ -50,9 +50,9 @@ static void		ft_depht(int key, t_map *map)
 static void		ft_zoom(int key, t_map *map)
 {
 	if (key == NUM_PLUS)
-		ft_zooming(WIN_W / 2, WIN_H / 2, &map->view, 1 / ZOOM, map);
+		ft_zooming(WIN_W / 2, WIN_H / 2, &map->view, 1 / ZOOM);
 	if (key == NUM_MINUS)
-		ft_zooming(WIN_W / 2, WIN_H / 2, &map->view, ZOOM, map);
+		ft_zooming(WIN_W / 2, WIN_H / 2, &map->view, ZOOM);
 }
 
 static void		ft_move(int key, t_map *map)
@@ -85,7 +85,6 @@ int				ft_key_hook(int key, t_map *map)
 	if (key == ESC)
 	{
 		mlx_destroy_window(map->mlx, map->win);
-		system("leaks fractol");
 		exit(EXIT_SUCCESS);
 	}
 	return (0);

@@ -23,9 +23,10 @@ int			ft_mouse_bind(int key, int x, int y, t_map *map)
 int			ft_mouse_scroll(int key, int x, int y, t_map *map)
 {
 	if (key == SCROLL_UP)
-		ft_zooming(x, y, &map->view, 1 / ZOOM, map);
+		ft_zooming(x, y, &map->view, 1 / ZOOM);
 	else if (key == SCROLL_DOWN)
-		ft_zooming(x, y, &map->view, ZOOM, map);
+		ft_zooming(x, y, &map->view, ZOOM);
+	ft_solver(map);
 	map->mouse.isdown |= 1 << key;
 	return (0);
 }

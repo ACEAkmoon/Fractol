@@ -59,7 +59,7 @@ void				ft_draw(t_map *map);
 void				ft_error(char *err_str);
 void				ft_display_controls(void);
 void				ft_fractol_view(t_view *v);
-void				ft_zooming(int x, int y, t_view *v, double z, t_map *map);
+void				ft_zooming(int x, int y, t_view *v, double z);
 int					ft_get_color(t_pixel p, t_map *map);
 int					ft_mouse_scroll(int button, int x, int y, t_map *map);
 int					ft_mouse_bind(int button, int x, int y, t_map *map);
